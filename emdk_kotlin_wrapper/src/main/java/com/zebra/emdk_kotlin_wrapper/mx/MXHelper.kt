@@ -52,6 +52,51 @@ object MXHelper {
         ) {}
     }
 
+    /**
+     * Factory Reset, wipes the user data partition and the enterprise partition,
+     * the device comes back in its out-of-the-box state.
+     *
+     * The device reboots on its own, no result XML comes back to the caller.
+     */
+    @Keep
+    fun factoryResetDevice(context: Context, delaySeconds: Long = 0) {
+        MXProfileProcessor.callPowerManagerFeature(
+            context,
+            MXBase.PowerManagerOptions.FACTORY_RESET,
+            delaySeconds = delaySeconds
+        ) {}
+    }
+
+    /**
+     * Enterprise Reset, wipes the user data partition but keeps the enterprise
+     * partition (/enterprise), so enterprise settings and files survive.
+     *
+     * The device reboots on its own, no result XML comes back to the caller.
+     */
+    @Keep
+    fun enterpriseResetDevice(context: Context, delaySeconds: Long = 0) {
+        MXProfileProcessor.callPowerManagerFeature(
+            context,
+            MXBase.PowerManagerOptions.ENTERPRISE_RESET,
+            delaySeconds = delaySeconds
+        ) {}
+    }
+
+    /**
+     * Full Device Wipe, a Factory Reset that in addition wipes the SD card and
+     * any other removable storage.
+     *
+     * The device reboots on its own, no result XML comes back to the caller.
+     */
+    @Keep
+    fun fullDeviceWipe(context: Context, delaySeconds: Long = 0) {
+        MXProfileProcessor.callPowerManagerFeature(
+            context,
+            MXBase.PowerManagerOptions.FULL_DEVICE_WIPE,
+            delaySeconds = delaySeconds
+        ) {}
+    }
+
     @Keep
     fun upgradeOS(context: Context, zipFilePath: String, suppressReboot: Boolean, delaySeconds: Long = 0) {
         val suppressReboot = if (suppressReboot) MXBase.PowerManagerSuppressRebootOptions.TRUE

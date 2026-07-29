@@ -27,6 +27,7 @@ import java.util.Locale
  * MXHelper.upgradeOS()       -> ResetAction 10 (upgrade)
  * MXHelper.downgradeOS()     -> ResetAction 11 (downgrade)
  * MXHelper.cancelOngoingUpdate() -> ResetAction 14
+ * MXHelper.factoryResetDevice()  -> ResetAction 6  (factory reset)
  * MXHelper.fetchOSUpdateStatus() -> oem_info content provider
  */
 class MainViewModel : ViewModel() {
@@ -58,6 +59,7 @@ class MainViewModel : ViewModel() {
     val busy: MutableState<Boolean> = mutableStateOf(false)
     val pendingConfirmMode: MutableState<UpdateMode?> = mutableStateOf(null)
     val shouldShowRebootDialog: MutableState<Boolean> = mutableStateOf(false)
+    val shouldShowFactoryResetDialog: MutableState<Boolean> = mutableStateOf(false)
     val logs = mutableStateListOf<String>()
 
     private var statusPollingJob: Job? = null
@@ -201,6 +203,32 @@ class MainViewModel : ViewModel() {
 
     fun dismissRebootDialog() {
         shouldShowRebootDialog.value = false
+    }
+
+    // ---------------------------------------------------------------- factory reset
+
+    /** Asks for confirmation first, the real work is done by [factoryResetDevice]. */
+    fun requestFactoryReset() {
+        shouldShowFactoryResetDialog.value = true
+    }
+
+    fun cancelFactoryReset() {
+        shouldShowFactoryResetDialog.value = false
+    }
+
+    /**
+     * Wipes the device back to its out-of-the-box state, the device reboots on its
+     * own and MX never sends a result back, so there is nothing to wait for here.
+     */
+    fun factoryResetDevice(context: Context) {
+        shouldShowFactoryResetDialog.value = false
+        if (!emdkReady.value) {
+            log("EMDK is not ready yet")
+            return
+        }
+        log("factory reset requested, the device will wipe and reboot ...")
+        stopStatusPolling()
+        MXHelper.factoryResetDevice(context)
     }
 
     // ---------------------------------------------------------------- status polling

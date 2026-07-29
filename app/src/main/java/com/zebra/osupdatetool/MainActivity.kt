@@ -167,6 +167,7 @@ class MainActivity : ComponentActivity() {
             )
             OptionSection()
             ActionSection(context)
+            FactoryResetSection()
             StatusSection(context)
             LogSection()
         }
@@ -188,6 +189,10 @@ class MainActivity : ComponentActivity() {
 
         if (viewModel.shouldShowRebootDialog.value) {
             RebootDialog(context)
+        }
+
+        if (viewModel.shouldShowFactoryResetDialog.value) {
+            ConfirmFactoryResetDialog(context)
         }
     }
 
@@ -295,6 +300,21 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
+    private fun FactoryResetSection() {
+        Text("4. Factory reset", fontWeight = FontWeight.Bold, color = Color(0xFFD10000))
+        Text(
+            "A factory reset erases all user data and enterprise settings and brings " +
+                "the device back to its out-of-the-box state. The device wipes and " +
+                "reboots immediately, this can not be undone.",
+            fontSize = 11.sp
+        )
+        RoundButton("Factory Reset Device", Color(0xFFD10000)) {
+            if (viewModel.emdkReady.value) viewModel.requestFactoryReset()
+        }
+        HorizontalDivider(Modifier.padding(vertical = 8.dp))
+    }
+
+    @Composable
     private fun StatusSection(context: Context) {
         Text("OS update status", fontWeight = FontWeight.Bold)
         Card(Modifier.fillMaxWidth()) {
@@ -374,7 +394,54 @@ class MainActivity : ComponentActivity() {
         )
     }
 
+    /**
+     * A factory reset can not be undone, so the confirmation asks the user to type
+     * [FACTORY_RESET_KEYWORD] instead of offering a single tappable button.
+     */
+    @Composable
+    private fun ConfirmFactoryResetDialog(context: Context) {
+        var typed by remember { mutableStateOf("") }
+        AlertDialog(
+            onDismissRequest = { viewModel.cancelFactoryReset() },
+            confirmButton = {
+                TextButton(
+                    enabled = typed.trim().equals(FACTORY_RESET_KEYWORD, ignoreCase = true),
+                    onClick = { viewModel.factoryResetDevice(context) }
+                ) {
+                    Text("FACTORY RESET")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { viewModel.cancelFactoryReset() }) {
+                    Text("CANCEL")
+                }
+            },
+            title = { Text("Factory reset this device ?") },
+            text = {
+                Column {
+                    Text(
+                        "All user data, installed apps and enterprise settings will be " +
+                            "erased and the device will reboot into its out-of-the-box " +
+                            "state. This can not be undone.",
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                    Text(
+                        "\nType $FACTORY_RESET_KEYWORD to confirm:",
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                    StyledOutlinedTextField(
+                        placeholder = FACTORY_RESET_KEYWORD,
+                        currentValue = typed,
+                        keyboardType = KeyboardType.Text
+                    ) { typed = it }
+                }
+            }
+        )
+    }
+
     companion object {
+        private const val FACTORY_RESET_KEYWORD = "RESET"
+
         private val ZIP_MIME_TYPES = arrayOf(
             "application/zip",
             "application/x-zip-compressed",
