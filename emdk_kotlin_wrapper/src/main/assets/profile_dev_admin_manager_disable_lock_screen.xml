@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="DevAdminManagerDisableLockScreen"/>
+        <parm name="ModifiedDate" value="2025-11-14 15:23:36"/>
+        <parm name="TargetSystemVersion" value="10.5"/>
+        <characteristic type="DevAdmin" version="10.5">
+            <parm name="emdk_name" value="DevAdminManagerDisableLockScreen"/>
+            <parm name="ScreenLockType" value="=[ScreenLockType]"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

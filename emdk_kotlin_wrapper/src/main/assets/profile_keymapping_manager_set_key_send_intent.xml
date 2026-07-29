@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="KeymappingManagerSetKeySendIntent"/>
+        <parm name="ModifiedDate" value="2025-11-20 16:33:05"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="KeyMappingMgr" version="9.2">
+            <parm name="emdk_name" value="KeymappingManagerSetKeySendIntent"/>
+            <parm name="Action" value="1"/>
+            <characteristic type="KeyMapping">
+                <parm name="KeyIdentifier" value="=[KeyIdentifier]"/>
+                <characteristic type="BaseTable">
+                    <parm name="BaseBehavior" value="3"/>
+                    <parm name="BaseSendIntent" value="1"/>
+                    <parm name="BaseIntentType" value="2"/>
+                    <parm name="BaseIntentAction" value="=[BaseIntentAction]"/>
+                    <parm name="BaseIntentCategory" value="=[BaseIntentCategory]"/>
+                    <parm name="BaseIntentStringExtraName" value="=[BaseIntentStringExtraName]"/>
+                    <parm name="BaseIntentStringExtraValue" value="=[BaseIntentStringExtraValue]"/>
+                </characteristic>
+            </characteristic>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

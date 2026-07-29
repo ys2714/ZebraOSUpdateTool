@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wap-provisioningdoc>
+    <characteristic type="ProfileInfo">
+        <parm name="created_wizard_version" value="14.0.0"/>
+    </characteristic>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="BatteryManagerSetCriticalLowThreshold"/>
+        <parm name="ModifiedDate" value="2026-04-14 17:28:37"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="BatteryMgr" version="8.3">
+            <parm name="emdk_name" value="BatteryManagerSetCriticalLowThreshold"/>
+            <parm name="SetCriticalLowThreshold" value="=[SetCriticalLowThreshold]"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

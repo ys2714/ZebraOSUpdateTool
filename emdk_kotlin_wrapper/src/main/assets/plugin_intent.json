@@ -1,0 +1,15 @@
+{
+  "CONFIG_MODE": "UPDATE",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PROFILE_ENABLED": "=[PROFILE_ENABLED]",
+  "PLUGIN_CONFIG" : {
+    "PLUGIN_NAME" : "INTENT",
+    "RESET_CONFIG" : "false",
+    "PARAM_LIST" : {
+      "intent_output_enabled": "=[intent_output_enabled]",
+      "intent_action": "=[intent_action]",
+      "intent_category": "=[intent_category]",
+      "intent_delivery": "=[intent_delivery]"
+    }
+  }
+}

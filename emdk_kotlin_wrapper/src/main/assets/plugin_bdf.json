@@ -1,0 +1,14 @@
+{
+  "CONFIG_MODE": "UPDATE",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PROFILE_ENABLED": "=[PROFILE_ENABLED]",
+  "PLUGIN_CONFIG": {
+    "PLUGIN_NAME": "BDF",
+    "OUTPUT_PLUGIN_NAME": "=[OUTPUT_PLUGIN_NAME]",
+    "RESET_CONFIG": "true",
+    "PARAM_LIST": {
+      "bdf_enabled": "=[bdf_enabled]",
+      "bdf_send_data": "=[bdf_send_data]"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="AccessManagerAllowPermission" />
+        <characteristic version="8.3" type="AccessMgr" >
+            <parm name="PermissionAccessAction" value="=[PermissionAccessAction]" />
+            <parm name="PermissionAccessPackageName" value="=[PermissionAccessPackageName]" />
+            <parm name="ApplicationClassName" value="=[ApplicationClassName]" />
+            <parm name="PermissionAccessPermissionName" value="=[PermissionAccessPermissionName]" />
+            <parm name="PermissionAccessSignature" value="=[PermissionAccessSignature]" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

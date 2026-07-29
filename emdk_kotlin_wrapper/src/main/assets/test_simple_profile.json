@@ -1,0 +1,35 @@
+{
+  "CONFIG_MODE": "CREATE_IF_NOT_EXIST",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PLUGIN_CONFIG": [ {
+      "PLUGIN_NAME": "WORKFLOW",
+      "RESET_CONFIG": "true",
+      "PARAM_LIST": {
+        "scanner_selection": "auto",
+        "decoder_upca": "true",
+        "decoder_ean13": "true",
+        "decoder_code128": "true",
+        "decoder_code39": "true",
+        "scanner_input_enabled": "true"
+      }
+    }, {
+      "PLUGIN_NAME": "INTENT",
+      "RESET_CONFIG": "true",
+      "PARAM_LIST": {
+        "intent_category": "android.intent.category.DEFAULT",
+        "intent_delivery": "2",
+        "intent_action": "=[intent_action]",
+        "intent_output_enabled": "true"
+      }
+    }
+  ],
+  "PROFILE_ENABLED": "true",
+  "APP_LIST": [
+    {
+      "PACKAGE_NAME": "=[PACKAGE_NAME]",
+      "ACTIVITY_LIST": [
+        "*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="PowerKeyManagerSetPowerOffState"/>
+        <parm name="ModifiedDate" value="2025-11-19 18:04:37"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="PowerKeyMgr" version="4.3">
+            <parm name="emdk_name" value="PowerKeyManagerSetPowerOffState"/>
+            <parm name="SafeMode" value="=[SafeMode]"/>
+            <parm name="TouchPanel" value="=[TouchPanel]"/>
+            <parm name="TouchPanelMode" value="=[TouchPanelMode]"/>
+            <parm name="AutoScreenLockOption" value="=[AutoScreenLockOption]"/>
+            <parm name="AutoScreenLockState" value="=[AutoScreenLockState]"/>
+            <parm name="PowerOffState" value="=[PowerOffState]"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

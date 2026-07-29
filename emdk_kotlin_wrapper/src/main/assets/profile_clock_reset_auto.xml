@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="ClockResetAuto"/>
+        <parm name="ModifiedDate" value="2025-11-19 16:01:26"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="Clock" version="6.0" >
+            <parm name="emdk_name" value="ClockResetAuto"/>
+            <parm name="AutoTimeZone" value="true"/>
+            <parm name="TimeZone" value="=[TimeZone]"/>
+            <parm name="AutoTime" value="true"/>
+            <characteristic type="AutoTimeDetails">
+                <parm name="NTPServer" value="=[NTPServer]"/>
+                <parm name="SyncInterval" value="=[SyncInterval]"/>
+            </characteristic>
+            <parm name="MilitaryTime" value="=[MilitaryTime]" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="BluetoothMgrProfile-1"/>
+        <characteristic type="BluetoothMgr" version="11.1">
+            <parm name="AllowPairing" value="1"/>
+            <parm name="AllowDiscoverability" value="1"/>
+            <parm name="AllowSilentPairing" value="1"/>
+            <parm name="SilentPairingDefaultMethod" value="1"/>
+            <parm name="SilentPairingAction" value="1"/>
+            <parm name="MandatoryIdentifier" value="1"/>
+            <characteristic type="SilentPairingDeviceDetails">
+                <parm name="SilentPairingName" value="soundcore Liberty 4 NC"/>
+                <parm name="SilentPairingUAP" value="E8:26:CF"/>
+            </characteristic>
+            <parm name="IsSilentPairingRule" value="1" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

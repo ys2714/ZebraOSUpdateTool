@@ -1,0 +1,22 @@
+{
+  "CONFIG_MODE": "UPDATE",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PROFILE_ENABLED": "=[PROFILE_ENABLED]",
+  "PLUGIN_CONFIG": {
+    "PLUGIN_NAME": "INTENT",
+    "RESET_CONFIG": "true",
+    "PARAM_LIST": {
+      "intent_output_enabled": "=[intent_output_enabled]",
+      "intent_action": "=[intent_action]",
+      "intent_category": "=[intent_category]",
+      "intent_delivery": "=[intent_delivery]",
+      "intent_component_info": [
+        {
+          "PACKAGE_NAME": "=[PACKAGE_NAME]",
+          "SIGNATURE": "=[SIGNATURE]"
+        }
+      ],
+      "intent_use_content_provider": "intent_use_content_provider"
+    }
+  }
+}

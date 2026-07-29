@@ -1,0 +1,14 @@
+{
+  "CONFIG_MODE": "UPDATE",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PROFILE_ENABLED": "=[PROFILE_ENABLED]",
+  "PLUGIN_CONFIG": {
+    "PLUGIN_NAME": "WORKFLOW",
+    "RESET_CONFIG": "true",
+    "selected_workflow_name": "free_form_ocr",
+    "workflow_input_enabled": "=[workflow_input_enabled]",
+    "PARAM_LIST": [
+      {}
+    ]
+  }
+}

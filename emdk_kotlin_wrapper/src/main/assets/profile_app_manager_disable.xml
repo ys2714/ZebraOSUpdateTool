@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+    <parm name="ProfileName" value="AppManagerDisable"/>
+        <characteristic version="15.2" type="AppMgr">
+            <parm name="Action" value="DisableApplication"/>
+            <parm name="Package" value="=[Package]"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

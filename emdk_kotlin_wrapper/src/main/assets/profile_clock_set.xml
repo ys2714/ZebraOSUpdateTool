@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="ClockSet"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="Clock" version="6.0" >
+            <parm name="emdk_name" value="ClockSet"/>
+            <parm name="AutoTimeZone" value="false"/>
+            <parm name="AutoTime" value="=[AutoTime]"/>
+            <parm name="TimeZone" value="=[TimeZone]"/>
+            <parm name="Date" value="=[Date]"/>
+            <parm name="Time" value="=[Time]"/>
+            <parm name="MilitaryTime" value="=[MilitaryTime]" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

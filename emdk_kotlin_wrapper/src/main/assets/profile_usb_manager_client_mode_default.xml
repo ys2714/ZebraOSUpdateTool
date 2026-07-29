@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="UsbClientModeDefault"/>
+        <parm name="ModifiedDate" value="2026-02-02 15:56:51"/>
+        <parm name="TargetSystemVersion" value="10.4"/>
+        <characteristic type="UsbMgr" version="10.4">
+            <parm name="emdk_name" value="UsbClientModeDefault"/>
+            <characteristic type="SelectedAccessDeviceStorageUsage">
+                <parm name="UsbClientModeDefault" value="=[UsbClientModeDefault]"/>
+            </characteristic>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

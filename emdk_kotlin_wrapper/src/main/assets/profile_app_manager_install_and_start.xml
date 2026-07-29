@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="AppManagerInstallAndStart"/>
+        <characteristic type="AppMgr" version="4.2">
+            <parm name="Action" value="Install"/>
+            <parm name="APK" value="=[APK]"/>
+        </characteristic>
+        <characteristic version="4.3" type="Intent">
+            <parm name="Action" value="StartActivity" />
+            <parm name="ActionName" value="android.intent.action.MAIN" />
+            <parm name="Package" value="=[Package]" />
+            <parm name="Class" value="=[Class]" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

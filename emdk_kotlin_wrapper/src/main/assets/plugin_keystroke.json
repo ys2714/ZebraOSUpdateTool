@@ -1,0 +1,12 @@
+{
+  "CONFIG_MODE": "UPDATE",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PROFILE_ENABLED": "=[PROFILE_ENABLED]",
+  "PLUGIN_CONFIG" : {
+    "PLUGIN_NAME" : "KEYSTROKE",
+    "RESET_CONFIG" : "true",
+    "PARAM_LIST" : {
+      "keystroke_output_enabled": "=[keystroke_output_enabled]"
+    }
+  }
+}

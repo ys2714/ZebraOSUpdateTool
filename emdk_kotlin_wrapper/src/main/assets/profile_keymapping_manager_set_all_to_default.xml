@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="KeymappingManagerSetAllToDefault"/>
+        <parm name="ModifiedDate" value="2025-11-20 16:33:05"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="KeyMappingMgr" version="9.2">
+            <parm name="emdk_name" value="KeymappingManagerSetAllToDefault"/>
+            <parm name="Action" value="2"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

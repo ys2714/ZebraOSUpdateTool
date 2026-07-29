@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="PowerManagerRecoveryModeAccess"/>
+        <parm name="ModifiedDate" value="2026-02-02 15:00:40"/>
+        <parm name="TargetSystemVersion" value="13.1"/>
+        <characteristic type="PowerMgr" version="13.1">
+            <parm name="emdk_name" value="PowerManagerRecoveryModeAccess"/>
+            <parm name="RecoveryModeAccess" value="=[RecoveryModeAccess]"/>
+            <parm name="RecoveryModeOverride" value="0"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

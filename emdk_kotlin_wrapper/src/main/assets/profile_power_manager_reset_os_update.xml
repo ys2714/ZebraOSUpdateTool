@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="PowerManagerResetOSUpdate"/>
+        <parm name="ModifiedDate" value="2025-11-25 11:41:52"/>
+        <parm name="TargetSystemVersion" value="10.0"/>
+        <characteristic type="PowerMgr" version="10.0">
+            <parm name="emdk_name" value="PowerManagerResetOSUpdate"/>
+            <parm name="ResetAction" value="=[ResetAction]"/>
+            <characteristic type="file-details">
+                <parm name="ZipFile" value="=[ZipFile]"/>
+            </characteristic>
+            <parm name="SuppressReboot" value="=[SuppressReboot]"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="DataWedgeManagerImportProfile"/>
+        <parm name="TargetSystemVersion" value="10.1"/>
+        <characteristic version="10.1" type="DataWedgeMgr">
+            <parm name="ConfigurationFile" value="=[ConfigurationFile]" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

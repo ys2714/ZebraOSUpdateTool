@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="PowerManagerSetWakeUpKey"/>
+        <parm name="ModifiedDate" value="2026-06-29 14:57:03"/>
+        <parm name="TargetSystemVersion" value="14.0"/>
+        <characteristic type="PowerMgr" version="14.0">
+            <parm name="emdk_name" value="PowerManagerSetWakeUpKey"/>
+            <parm name="WakeUpMethod" value="2"/>
+            <parm name="WakeUpIndividualAction" value="=[WakeUpIndividualAction]"/>
+            <parm name="WakeUpKeyIdentifier" value="Custom"/>
+            <parm name="WakeUpKeyIdentifierCustom" value="=[WakeUpKeyIdentifierCustom]"/>
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>

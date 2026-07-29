@@ -1,0 +1,11 @@
+{
+  "CONFIG_MODE": "CREATE_IF_NOT_EXIST",
+  "PROFILE_NAME": "=[PROFILE_NAME]",
+  "PROFILE_ENABLED": "=[PROFILE_ENABLED]",
+  "APP_LIST": [
+    {
+      "PACKAGE_NAME": "=[PACKAGE_NAME]",
+      "ACTIVITY_LIST": [ "*" ]
+    }
+  ]
+}

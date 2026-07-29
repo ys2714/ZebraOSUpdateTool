@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wap-provisioningdoc>
+    <characteristic type="Profile">
+        <parm name="ProfileName" value="AccessManagerAllowCallService" />
+        <characteristic type="AccessMgr" version="9.2" >
+            <parm name="OperationMode" value="1" />
+            <parm name="ServiceAccessAction" value="4" />
+            <parm name="ServiceIdentifier" value="=[ServiceIdentifier]" />
+            <parm name="CallerPackageName" value="=[CallerPackageName]" />
+            <parm name="CallerSignature" value="=[CallerSignature]" />
+        </characteristic>
+    </characteristic>
+</wap-provisioningdoc>
