@@ -78,6 +78,7 @@ fun FilePickerDialog(
                     fontSize = 12.sp,
                     fontFamily = FontFamily.Monospace,
                     maxLines = 2,
+                    softWrap = true,
                     overflow = TextOverflow.Ellipsis
                 )
             }
@@ -88,7 +89,12 @@ fun FilePickerDialog(
                     Row(Modifier.fillMaxWidth()) {
                         roots.forEach { root ->
                             TextButton(onClick = { currentDirectory = root }) {
-                                Text(root.name.ifEmpty { root.absolutePath }, fontSize = 11.sp)
+                                Text(
+                                    root.name.ifEmpty { root.absolutePath },
+                                    maxLines = 3,
+                                    softWrap = true,
+                                    fontSize = 11.sp
+                                )
                             }
                         }
                     }
@@ -133,7 +139,7 @@ private fun FileRow(file: File, onClick: () -> Unit) {
             modifier = Modifier.padding(end = 8.dp)
         )
         Column {
-            Text(file.name, fontSize = 14.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(file.name, fontSize = 14.sp, maxLines = 3, softWrap = true, overflow = TextOverflow.Ellipsis)
             if (!file.isDirectory) {
                 Text(StorageUtils.humanReadableSize(file.length()), fontSize = 11.sp)
             }
