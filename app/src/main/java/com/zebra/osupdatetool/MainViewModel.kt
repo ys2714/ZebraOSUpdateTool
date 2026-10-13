@@ -239,8 +239,8 @@ class MainViewModel : ViewModel() {
         }
         statusPollingJob = viewModelScope.launch {
             while (isActive) {
-                fetchStatusOnce(context)
                 delay(POLLING_INTERVAL_MS)
+                fetchStatusOnce(context)
             }
         }
     }
@@ -281,7 +281,7 @@ class MainViewModel : ViewModel() {
     }
 
     companion object {
-        private const val POLLING_INTERVAL_MS = 5_000L
+        private const val POLLING_INTERVAL_MS = 500_000L
         private const val MAX_LOG_LINES = 100
     }
 }

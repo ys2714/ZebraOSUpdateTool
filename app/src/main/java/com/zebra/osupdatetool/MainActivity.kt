@@ -161,6 +161,7 @@ class MainActivity : ComponentActivity() {
                 .padding(horizontal = 16.dp, vertical = 8.dp)
         ) {
             HeaderSection()
+            StatusSection(context)
             BSPFileSection(
                 onBrowse = { showFilePicker = true },
                 onSystemPicker = { openDocumentLauncher.launch(ZIP_MIME_TYPES) }
@@ -168,7 +169,6 @@ class MainActivity : ComponentActivity() {
             OptionSection()
             ActionSection(context)
             FactoryResetSection()
-            StatusSection(context)
             LogSection()
         }
 
@@ -202,6 +202,10 @@ class MainActivity : ComponentActivity() {
             "Zebra OS Update Tool",
             fontWeight = FontWeight.Bold,
             fontSize = 20.sp
+        )
+        Text(
+            "BSP build: ${Build.DISPLAY}",
+            fontSize = 12.sp
         )
         Text(
             if (viewModel.emdkReady.value) {
